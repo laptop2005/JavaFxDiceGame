@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="600.0" minWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.MainController">
+  <!-- TODO Add Nodes -->
+  <bottom>
+    <Pane prefHeight="100.0" prefWidth="200.0">
+      <children>
+        <Button layoutX="438.0" layoutY="46.0" mnemonicParsing="false" onAction="#throwDice" text="주사위던지기" />
+        <Label layoutX="22.0" layoutY="21.0" text="사용자보유금액">
+          <font>
+            <Font size="20.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="label_userMoney" alignment="CENTER_RIGHT" contentDisplay="RIGHT" font="$x1" layoutX="24.0" layoutY="53.0" prefWidth="138.0" text="0" textAlignment="RIGHT" />
+        <Label font="$x1" layoutX="251.0" layoutY="21.0" text="배팅금액" />
+        <Label fx:id="label_userBet" alignment="CENTER_RIGHT" contentDisplay="RIGHT" font="$x1" layoutX="193.0" layoutY="52.0" prefWidth="138.0" text="0" textAlignment="RIGHT" />
+        <Button fx:id="button_upBet" layoutX="343.0" layoutY="38.0" maxWidth="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clickUpBet" text="▲">
+          <font>
+            <Font size="14.0" fx:id="x2" />
+          </font>
+        </Button>
+        <Button fx:id="button_downBet" font="$x2" layoutX="343.0" layoutY="64.0" maxWidth="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clickDownBet" text="▼" />
+      </children>
+    </Pane>
+  </bottom>
+  <center>
+    <BorderPane prefHeight="400.0" prefWidth="200.0">
+      <bottom>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <children>
+            <ImageView fx:id="imageView_dice_2_1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_1.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_2_2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_2.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_2_3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_3.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_2_4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_4.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_2_5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_5.jpg" />
+              </image>
+            </ImageView>
+          </children>
+        </FlowPane>
+      </bottom>
+      <center>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <Label id="" fx:id="label_whosWin" alignment="CENTER" layoutX="50.0" layoutY="74.0" prefHeight="52.9443359375" prefWidth="500.0" text="" textAlignment="CENTER">
+              <font>
+                <Font size="24.0" fx:id="x3" />
+              </font>
+            </Label>
+            <Label id="" fx:id="label_diceRule1" alignment="CENTER" font="$x3" layoutX="50.0" layoutY="0.0" prefHeight="52.9443359375" prefWidth="500.0" text="" textAlignment="CENTER" />
+            <Label id="" fx:id="label_diceRule2" alignment="CENTER" font="$x3" layoutX="50.0" layoutY="147.0" prefHeight="52.9443359375" prefWidth="500.0" text="" textAlignment="CENTER" />
+          </children>
+        </Pane>
+      </center>
+      <top>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <children>
+            <ImageView fx:id="imageView_dice_1_1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_1.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_1_2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_2.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_1_3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_3.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_1_4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_4.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="imageView_dice_1_5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resource/dice_5.jpg" />
+              </image>
+            </ImageView>
+          </children>
+        </FlowPane>
+      </top>
+    </BorderPane>
+  </center>
+  <top>
+    <Pane prefHeight="100.0" prefWidth="200.0">
+      <children>
+        <Label font="$x1" layoutX="150.0" layoutY="38.0" text="컴퓨터보유금액" />
+        <Label id="label_userMoney" fx:id="label_comMoney" alignment="CENTER_RIGHT" contentDisplay="RIGHT" font="$x1" layoutX="300.0" layoutY="38.0" prefWidth="138.0" text="0" textAlignment="RIGHT" />
+      </children>
+    </Pane>
+  </top>
+</BorderPane>
